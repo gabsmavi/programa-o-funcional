@@ -1,0 +1,98 @@
+/* by: Gabriel Viana */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Consolas", monospace;
+}
+
+/* Background */
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card principal */
+.container {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  width: 320px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 6px rgba(102,126,234,0.5);
+}
+
+/* Botões */
+button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Links */
+a {
+  display: block;
+  margin-top: 12px;
+  color: #667eea;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Link para cadastro */
+
+.highlight-link {
+  color: #FFD700; /* amarelo */
+  text-decoration: none; /* sem underline */
+  font-weight: bold;
+}
+
+.highlight-link:hover {
+  text-decoration: underline; /* underline apenas no hover */
+}
+
+
+/* Animaçã de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
