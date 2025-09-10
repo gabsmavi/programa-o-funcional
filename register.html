@@ -1,0 +1,36 @@
+<!-- by: Vitor -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Registrar</h2>
+    <input type="text" id="name" placeholder="Nome" required>
+    <input type="email" id="email" placeholder="E-mail" required>
+    <input type="password" id="password" placeholder="Senha" required>
+    <button onclick="handleRegister()">Registrar</button>
+    <a href="login.html">Já tem conta? Faça login</a>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    function handleRegister() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (name && email && password) {
+        if (registerUser(name, email, password)) {
+          window.location.href = "login.html";
+        }
+      } else {
+        alert("Preencha todos os campos!");
+      }
+    }
+  </script>
+</body>
+</html>
