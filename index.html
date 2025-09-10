@@ -1,0 +1,27 @@
+<!-- by: Anne -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Inicial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Bem-vindo!</h2>
+    <p id="welcome"></p>
+    <button onclick="logoutUser()">Sair</button>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    const user = getLoggedUser();
+    if (!user) {
+      window.location.href = "login.html";
+    } else {
+      document.getElementById("welcome").textContent = 
+        `Olá, ${user.name}! Você está logado com o e-mail ${user.email}.`;
+    }
+  </script>
+</body>
+</html>
